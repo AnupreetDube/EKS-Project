@@ -23,7 +23,12 @@ Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes ser
           •	AWS WebUI
           •	CLI : using default AWS commands
           •	CLI : using 3rd party command : ekctl 
-          
+### HELM
+![](helm.png)
+
+Helm is the **package manager** for kbernetes just like we have yum in RHEL8
+Helm Charts help in *downloading--> Installing--> launching* the complete APPlications in one go!! 
+
 ### Internally, Kubernetes requires the following programs/ Applications  :
 
 **1.	In Master node :**
@@ -130,12 +135,24 @@ Open the Grafana WEBUI in the browser and if everything goes fine, then we will 
 
 ![](grafanaloginpageblank.jpeg)
 
-***4. 
+**4. Importing Precreated Dashboard into grafana**
+- Open  **GrafanaLabs** webPage 
+- Search For Prometheus Dashboard 
 
+![](Screenshot (1377).png)
+- Select the following dashboard and copy its ID :
 
+![](Screenshot (1378).png)
 
+**5. Import it in Grafana**
+- In Grafana WebUI --> Left Pane --> + --> Import
 
+![](newdashboard.png)
 
+- Select the Data Source as Prometheus
 
+- Launch The Dashboard
 
+![](dashboardfinal.png)
 
+***SO, FINALLY, WE HAVE CREATED A GRAPHANA DASHBOARD TO VISUALIZE THE REAL TIME LOGS OF THE NODES OF KUBERNETES CLUSTER COLLECTED BY PROMETHEUS !!!!***
