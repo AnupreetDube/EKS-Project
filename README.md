@@ -40,12 +40,10 @@ Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes ser
 
 
 # 2.	PROJECT PLAN 
-This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
-The Cluster will have the following Integrations:
-- MySql
-- Wordpress
-- Prometheus
-- Grafana
+- This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
+- The RealTime Metrics of the Cluster will be Fetched and Monitored by ***Prometheus***
+- The Metrics can then be visualized via ***Grafana***
+![](aws-dev-day-amazon-eks-42-638.jpg)
 
 ## PreRequisites
 - [x] Make an account on AWS
@@ -54,8 +52,9 @@ The Cluster will have the following Integrations:
 - [x] Download HELM command in your local system
 
 # 3.	PROJECT IMPLEMENTATION
+![](header.jpg)
 ## 1. Launch the EKS Cluster on AWS CLoud
-For this, we have to write a **YAML file** to define the specifications of the cluster like : 
+### For this, we have to write a ***YAML file*** to define the specifications of the cluster like : 
 - Type of Resource
 - name and region of cluster
 - specifications of Node Groups inside the cluster : 
@@ -84,11 +83,24 @@ eksctl create cluster -f cluster.yml
 ```
 ***So this will launch our Kubernetes Cluster on the AWS cloud...!!!***
 
+![](PROM.png)
+## 2. SetUp Prometheus Server on K8s Cluster via HELM : ***Package Manager for Kubernetes***
+1. Create Namespace to isolate the Prometheus space :
+```
+kubectl create namespace prometheus
+```
+2. Install HELM chart for prometheus :
+```
+helm install stable/prometheus --namespace prometheus --set alertmanager.persistentVolume.storageClass="gp2" --set server.persistentVolume.storageClass="gp2"
+```
+The above command will install Helm Chart for Prometheus from helm hub and will also Create a **PV** for the storage class named **gp2**
 
-
-
-
-
+3. Connect to the load balancer of K8s
+```
+kubectl -n prometheus  port-forward svc/riding-hedgehorn-prometheus-server  8888:80
+```
+4. Verify the Prometheus setup opening the Prometheus WebUI
+In the Browser, 
 
 
 
