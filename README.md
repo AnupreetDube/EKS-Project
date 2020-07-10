@@ -40,7 +40,8 @@ Internally, Kubernetes requires the following programs/ Applications  :
 
       i.	KubeLet : Takes requests from master
       ii.	Container Engine : to launch Pods Containers
-      
+
+
 ## 2.	PROJECT PLAN 
 This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
 The Cluster will have the following Integrations:
@@ -49,5 +50,27 @@ The Cluster will have the following Integrations:
 - Wordpress
 - Prometheus
 - Grafana
+
+## PreRequisites
+- [x] Make an account on AWS
+- [x] Download eksctl command in your local system
+- [x] Download Kubectl command in your local system
+- [x] Download HELM command in your local system
+
+## 3.	PROJECT IMPLEMENTATION
+### Preparing the Codes
+1. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
