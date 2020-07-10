@@ -58,8 +58,9 @@ The Cluster will have the following Integrations:
 - [x] Download HELM command in your local system
 
 ## 3.	PROJECT IMPLEMENTATION
-### Preparing the Codes
-1. 
+1.Preparing the Codes for :
+  - Cluster.yaml : For creating the EKS Cluster
+  - 
 
 
 
