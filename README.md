@@ -45,3 +45,9 @@ Internally, Kubernetes requires the following programs/ Applications  :
 This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
 The Cluster will have the following Integrations:
 
+- MySql
+- Wordpress
+- Prometheus
+- Grafana
+
+
