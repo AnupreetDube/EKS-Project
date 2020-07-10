@@ -1,20 +1,19 @@
+# ELASTIC KUBERNETES SERVICE : PROJECT
 ![](title.jpg)
-
-# ELASTIC KUBERNETES SERVICE
 
 > This project is a part of my EKS training under the mentorship of **Mr. Vimal Daga**
 
-## 1.	INTRODUCTION 
+# 1.	INTRODUCTION 
 Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service which has capability to leverage all the services of AWS like EFS, ELB, EC2, VPC, etc……
 
-### The Following Diagram shows the basic working of EKS Service .
+## The Following Diagram shows the basic working of EKS Service .
 
 ![](blockdiagramEKS.png)
 
-### Basic Kubernetes Cluster Setup : 
+## Basic Kubernetes Cluster Setup : 
 ![](KubernetesCluster.png)
 
-We need 2 categories of programs in order deploy and access  Kubernetes Cluster :
+### We need 2 categories of programs in order deploy and access  Kubernetes Cluster :
 
   1.	**Client Program** : Kubectl
   2.	**Cluster Creation Program :** 
@@ -25,7 +24,7 @@ We need 2 categories of programs in order deploy and access  Kubernetes Cluster 
           •	CLI : using default AWS commands
           •	CLI : using 3rd party command : ekctl 
           
-Internally, Kubernetes requires the following programs/ Applications  :
+### Internally, Kubernetes requires the following programs/ Applications  :
 
 **1.	In Master node :**
 
@@ -40,10 +39,9 @@ Internally, Kubernetes requires the following programs/ Applications  :
       ii.	Container Engine : to launch Pods Containers
 
 
-## 2.	PROJECT PLAN 
+# 2.	PROJECT PLAN 
 This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
 The Cluster will have the following Integrations:
-
 - MySql
 - Wordpress
 - Prometheus
@@ -55,9 +53,9 @@ The Cluster will have the following Integrations:
 - [x] Download Kubectl command in your local system
 - [x] Download HELM command in your local system
 
-## 3.	PROJECT IMPLEMENTATION
-# 1.Launch the EKS Cluster on AWS CLoud
-For this, we have to write a YAML file to define the specifications of the cluster like : 
+# 3.	PROJECT IMPLEMENTATION
+## 1. Launch the EKS Cluster on AWS CLoud
+For this, we have to write a **YAML file** to define the specifications of the cluster like : 
 - Type of Resource
 - name and region of cluster
 - specifications of Node Groups inside the cluster : 
@@ -80,7 +78,7 @@ nodeGroups:
 ```
 > Find the above code in the GitHub repo with the name : **cluster.yml**
 
-To launch this cluster :
+### To launch this cluster :
 ```
 eksctl create cluster -f cluster.yml
 ```
