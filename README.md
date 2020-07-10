@@ -125,10 +125,12 @@ The above command will:
 - Create a password for Grafana WebUI
 - Setup a Load Balancer for Grafana nodes
 
-**3. Verify the Grafana setup by opening the Grafana WebUI**
+**3. Open The Grafana WebUI**
+Open the Grafana WEBUI in the browser and if everything goes fine, then we will see the Grafana Login Dashboard as below :
 
+![](grafanaloginpageblank.jpeg)
 
-
+***4. 
 
 
 
