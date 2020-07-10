@@ -43,6 +43,8 @@ Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes ser
 - This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
 - The RealTime Metrics of the Cluster will be Fetched and Monitored by ***Prometheus***
 - The Metrics can then be visualized via ***Grafana***
+
+
 ![](aws-dev-day-amazon-eks-42-638.jpg)
 
 ## PreRequisites
@@ -85,21 +87,21 @@ eksctl create cluster -f cluster.yml
 
 ![](PROM.png)
 ## 2. SetUp Prometheus Server on K8s Cluster via HELM : ***Package Manager for Kubernetes***
-1. Create Namespace to isolate the Prometheus space :
+**1. Create Namespace to isolate the Prometheus space :**
 ```
 kubectl create namespace prometheus
 ```
-2. Install HELM chart for prometheus :
+**2. Install HELM chart for prometheus :**
 ```
 helm install stable/prometheus --namespace prometheus --set alertmanager.persistentVolume.storageClass="gp2" --set server.persistentVolume.storageClass="gp2"
 ```
 The above command will install Helm Chart for Prometheus from helm hub and will also Create a **PV** for the storage class named **gp2**
 
-3. Connect to the load balancer of K8s
+**3. Connect to the load balancer of K8s**
 ```
 kubectl -n prometheus  port-forward svc/riding-hedgehorn-prometheus-server  8888:80
 ```
-4. Verify the Prometheus setup opening the Prometheus WebUI
+**4. Verify the Prometheus setup opening the Prometheus WebUI**
 In the Browser, 
 
 
