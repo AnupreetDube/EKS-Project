@@ -102,7 +102,32 @@ The above command will install Helm Chart for Prometheus from helm hub and will 
 kubectl -n prometheus  port-forward svc/riding-hedgehorn-prometheus-server  8888:80
 ```
 **4. Verify the Prometheus setup opening the Prometheus WebUI**
-In the Browser, 
+
+Open the Prometheus WebUI in the browser and if the above setup is deployed successfully, then we can see the Prometheus Dashboard .!!!
+![](prometheusdashboard.png)
+
+This is the Dashboard of Prometheus.
+>To explore more, we can see the targets and graphs of our Cluster Nodes being monitored by Prometheus and can use PromQL to search within the Prometehus Database which is the PV Specified in step 2.
+
+![](GRA.png)
+## SetUp Grafana for Visualizing the Prometheus Metrics
+**1. Create Namespace to isolate the Grafana space :**
+```
+kubectl create namespace grafana
+```
+**2. Install HELM chart for grafana :**
+```
+helm install grafana/stable  --namespace grafana  --set persistence.storageClassName="gp2"  --set adminPasswod=redhat  --set service.type=LooadBalancer
+```
+The above command will:
+- install Helm Chart for Grafana from helm hub 
+- Create a **PV** for the storage class named **gp2**
+- Create a password for Grafana WebUI
+- Setup a Load Balancer for Grafana nodes
+
+**3. Verify the Grafana setup by opening the Grafana WebUI**
+
+
 
 
 
