@@ -2,9 +2,7 @@
 
 # ELASTIC KUBERNETES SERVICE
 
-> This project is a part of my
->EKS training under the mentorship of 
->Mr. Vimal Daga
+> This project is a part of my EKS training under the mentorship of **Mr. Vimal Daga**
 
 ## 1.	INTRODUCTION 
 Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service which has capability to leverage all the services of AWS like EFS, ELB, EC2, VPC, etc……
@@ -81,6 +79,7 @@ nodeGroups:
         publicKeyName: instancekey
 ```
 > Find the above code in the GitHub repo with the name : **cluster.yml**
+
 To launch this cluster :
 ```
 eksctl create cluster -f cluster.yml
