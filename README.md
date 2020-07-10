@@ -1,18 +1,17 @@
-# EKS-Project
 ![](title.jpg)
 
 # ELASTIC KUBERNETES SERVICE
 
-This project is a part of my 
+> This project is a part of my
 EKS training under the mentorship of 
 Mr. Vimal Daga
 
-# 1.	INTRODUCTION 
+## 1.	INTRODUCTION 
 Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service which has capability to leverage all the services of AWS like EFS, ELB, EC2, VPC, etc……
-The Following Diagram shows the basic working of EKS Service .
+###The Following Diagram shows the basic working of EKS Service .
 ![](blockdiagramEKS.png)
 
-## Basic Kubernetes Cluster Setup : 
+### Basic Kubernetes Cluster Setup : 
 ![](KubernetesCluster.png)
 
 We need 2 categories of programs in order deploy and access  Kubernetes Cluster :
@@ -33,6 +32,6 @@ Internally, Kubernetes requires the following programs/ Applications  :
       i.	KubeLet : Takes requests from master
       ii.	Container Engine : to launch Pods Containers
       
-# 2.	PROJECT PLAN 
+## 2.	PROJECT PLAN 
 This projects aims at deploying a Kubernetes Multinode cluster on top Of AWS cloud i.e. Deploying EKS cluster.
 The Cluster will have the following Integrations
