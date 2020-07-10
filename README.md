@@ -3,8 +3,8 @@
 # ELASTIC KUBERNETES SERVICE
 
 > This project is a part of my
-EKS training under the mentorship of 
-Mr. Vimal Daga
+>EKS training under the mentorship of 
+>Mr. Vimal Daga
 
 ## 1.	INTRODUCTION 
 Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service which has capability to leverage all the services of AWS like EFS, ELB, EC2, VPC, etc……
@@ -58,9 +58,35 @@ The Cluster will have the following Integrations:
 - [x] Download HELM command in your local system
 
 ## 3.	PROJECT IMPLEMENTATION
-1.Preparing the Codes for :
-  - Cluster.yaml : For creating the EKS Cluster
-  - 
+# 1.Launch the EKS Cluster on AWS CLoud
+For this, we have to write a YAML file to define the specifications of the cluster like : 
+- Type of Resource
+- name and region of cluster
+- specifications of Node Groups inside the cluster : 
+  - Name of node group
+  - Number of nodes inside the node group
+  - Instance type of Pod to be launched in each Nodegroup
+  - Key: to enable ssh
+```
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: ekscluster
+  region: ap-south-1
+nodeGroups:
+   - name: nodegroup1
+     desiredCapacity: 3
+     instanceType: t2.micro
+     ssh:
+        publicKeyName: instancekey
+```
+> Find the above code in the GitHub repo with the name : **cluster.yml**
+To launch this cluster :
+```
+eksctl create cluster -f cluster.yml
+```
+***So this will launch our Kubernetes Cluster on the AWS cloud...!!!***
+
 
 
 
