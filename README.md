@@ -139,10 +139,10 @@ Open the Grafana WEBUI in the browser and if everything goes fine, then we will 
 - Open  **GrafanaLabs** webPage 
 - Search For Prometheus Dashboard 
 
-![](Screenshot (1377).png)
+![](1.png)
 - Select the following dashboard and copy its ID :
 
-![](Screenshot (1378).png)
+![](2.png)
 
 **5. Import it in Grafana**
 - In Grafana WebUI --> Left Pane --> + --> Import
