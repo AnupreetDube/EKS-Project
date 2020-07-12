@@ -73,7 +73,7 @@ Helm Charts help in *downloading--> Installing--> launching* the complete APPlic
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: ekscluster
+  name: cluster1
   region: ap-south-1
 nodeGroups:
    - name: nodegroup1
