@@ -17,11 +17,10 @@ Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes ser
 
   1.	**Client Program** : Kubectl
   2.	**Cluster Creation Program :** 
-  
-      There are 3 ways to Interact/ access the EKS service : 
-          •	AWS WebUI
-          •	CLI : using default AWS commands
-          •	CLI : using 3rd party command : ekctl 
+  There are 3 ways to Interact/ access the EKS service : 
+          1.	AWS WebUI
+          2.	CLI : using default AWS commands
+          3.	CLI : using 3rd party command : ekctl 
 ### HELM
 ![](helm.png)
 
@@ -31,14 +30,14 @@ Helm Charts help in *downloading--> Installing--> launching* the complete APPlic
 ### Internally, Kubernetes requires the following programs/ Applications  :
 
 **1.	In Master node :**
-      i.	API server : takes requests from clients
-      ii.	Kube Scheduler : Decides in which node to implement the client’s request 
-      iii.	Kube Controller : Controls the nodes
-      iv.	ETCD : Database of Kubernetes
+      1.	API server : takes requests from clients
+      2.	Kube Scheduler : Decides in which node to implement the client’s request 
+      3.	Kube Controller : Controls the nodes
+      4.	ETCD : Database of Kubernetes
       
 **2.	In worker node:**
-      i.	KubeLet : Takes requests from master
-      ii.	Container Engine : to launch Pods Containers
+      1.	KubeLet : Takes requests from master
+      2.	Container Engine : to launch Pods Containers
 
 
 # 2.	PROJECT PLAN 
