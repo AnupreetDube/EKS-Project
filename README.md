@@ -30,14 +30,14 @@ Helm Charts help in *downloading--> Installing--> launching* the complete APPlic
 ### Internally, Kubernetes requires the following programs/ Applications  :
 
 **1.	In Master node :**
-      1.	API server : takes requests from clients
-      2.	Kube Scheduler : Decides in which node to implement the client’s request 
-      3.	Kube Controller : Controls the nodes
-      4.	ETCD : Database of Kubernetes
+1.	API server : takes requests from clients
+2.	Kube Scheduler : Decides in which node to implement the client’s request 
+3.	Kube Controller : Controls the nodes
+4.	ETCD : Database of Kubernetes
       
 **2.	In worker node:**
-      1.	KubeLet : Takes requests from master
-      2.	Container Engine : to launch Pods Containers
+1.	KubeLet : Takes requests from master
+2.	Container Engine : to launch Pods Containers
 
 
 # 2.	PROJECT PLAN 
