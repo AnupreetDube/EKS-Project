@@ -86,6 +86,8 @@ eksctl create cluster -f cluster.yml
 ```
 
 ![](clustercreated.png)
+
+
 ***So this will launch our Kubernetes Cluster on the AWS cloud...!!!***
 
 ![](PROM.png)
